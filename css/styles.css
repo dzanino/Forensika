@@ -270,3 +270,5 @@ h2{font-size:clamp(26px,4vw,38px)}
 .quote p{margin:0;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:17px;color:var(--ink);line-height:1.5}
 .quote cite{display:block;margin-top:8px;font-style:normal;font-size:13px;color:var(--slate)}
 .dedic{margin:6px 0 0;font-weight:600;color:var(--ink)}
+
+.ver{color:#8FA3B6;font-size:12px}
