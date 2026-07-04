@@ -4,6 +4,12 @@
 
   var DEFAULT_LANG = 'sk';
   var STORE_KEY = 'forensika-lang';
+  var currentLang = DEFAULT_LANG;
+
+  // Nainštalovaná appka (standalone) — skryjeme inštalačné prvky.
+  var standalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+    window.navigator.standalone === true;
+  if (standalone) document.documentElement.classList.add('standalone');
 
   // ---- i18n ----
   function dict(lang) {
@@ -15,6 +21,7 @@
     return (d[key] != null ? d[key] : (en[key] != null ? en[key] : null));
   }
   function applyLang(lang) {
+    currentLang = lang;
     var el, i, nodes = document.querySelectorAll('[data-i18n]');
     for (i = 0; i < nodes.length; i++) {
       el = nodes[i];
@@ -117,7 +124,7 @@
   window.addEventListener('beforeinstallprompt', function (e) {
     e.preventDefault();
     deferredPrompt = e;
-    if (banner) banner.classList.add('show');
+    if (!standalone && banner) banner.classList.add('show');
   });
   function doInstall() {
     if (!deferredPrompt) {
@@ -162,6 +169,9 @@
       }).catch(function (err) { console.warn('SW registrácia zlyhala:', err); });
     });
   }
+
+  // Umožní iným skriptom znovu aplikovať aktuálny jazyk (napr. po vykreslení zoznamov).
+  window.forensikaApplyLang = function () { applyLang(currentLang); };
 
   // ---- Štart ----
   initLang();

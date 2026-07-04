@@ -6,12 +6,12 @@ vzdelávanie a overené zdroje.
 
 Autor: **Ján Šikuta, MD, PhD.**
 
-## Koncept loga — „rozostrené → ostré“
+## Koncept loga — rozuzlenie / jasno
 
-Logo aj celá stránka pracujú s metaforou: keď okolnosti nie sú jasné, **forenzné vedy vnášajú
-svetlo a ostrosť**. Názov je vľavo jemne rozostrený a smerom doprava sa zaostruje; obsah stránky
-sa pri scrollovaní „zaostruje“ (blur → sharp). Symbol je presvetlená lupa s EKG krivkou
-(izoelektrická čiara + zvýraznený QRS komplex v spektrálnom prechode).
+Symbol je presvetlená lupa s EKG krivkou: **P vlna a QRS komplex sú mierne rozostrené**
+(neistota), ktoré prechádzajú do **ostrej izoelektrickej čiary** (jasno, rozuzlenie) — odkaz na
+cieľ súdneho lekárstva objasniť príčinu úmrtia a mechanizmus vzniku poranení a smrti. Obsah stránky
+sa pri scrollovaní „zaostruje" (blur → sharp).
 
 ## Štruktúra
 
@@ -20,16 +20,32 @@ forensika-pwa/
 ├── index.html              # hlavná stránka (SK/EN, DE pripravené)
 ├── css/styles.css          # štýl (paleta navy + spektrum)
 ├── js/i18n.js              # preklady SK/EN (+ DE slot)
-├── js/app.js               # jazyk, zaostrovanie, inštalácia, auto-update
+├── js/app.js               # jazyk, zaostrovanie, inštalácia, auto-update, standalone
+├── js/experts.js           # dátový súbor znalcov (doplniť overené záznamy)
+├── js/tools.js             # žiadosť o List, register znalcov, feedback
 ├── manifest.webmanifest    # PWA manifest
 ├── service-worker.js       # network-first + offline cache
-├── assets/
-│   ├── logo.svg            # logo (rozostrené → ostré)
-│   ├── favicon.svg
-│   ├── icon-192.png / icon-512.png / icon-maskable-512.png
-│   └── apple-touch-icon.png
+├── assets/  (logo.svg, favicon.svg, icon-*.png, apple-touch-icon.png)
 └── README.md
 ```
+
+## Konfigurácia (js/tools.js → CONFIG)
+
+- `feedbackEmail` — e-mail pre spätnú väzbu. Prázdny = hodnotenie sa uloží lokálne a zobrazí
+  poďakovanie; po vyplnení sa odošle e-mailom (mailto).
+- `listRequestEmail` — adresát žiadosti o List o prehliadke mŕtveho tela (predvolene
+  `sslapa@udzs-sk.sk`, sekcia SLaPA ÚDZS).
+
+## Znalci — súdne lekárstvo (js/experts.js)
+
+Mená a kontakty reálnych osôb **nevymýšľame**. Do `list` doplň iba OVERENÉ záznamy z verejného
+registra Ministerstva spravodlivosti SR (odvetvie „Súdne lekárstvo"). Kým je zoznam prázdny,
+zobrazí sa odkaz na oficiálny register.
+
+## Nainštalovaná appka (standalone)
+
+Po pridaní na plochu appka beží v standalone režime — inštalačné tlačidlá aj pruh sa automaticky
+skryjú, takže sa už nezobrazujú pri každom spustení.
 
 ## Jazyky
 

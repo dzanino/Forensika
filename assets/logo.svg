@@ -28,6 +28,7 @@
     <mask id="fade">
       <rect x="228" y="60" width="640" height="140" fill="url(#fadeGrad)"/>
     </mask>
+    <filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="2.1"/></filter>
   </defs>
 
   <!-- MARK: presvetlená lupa (nástroj jasna) -->
@@ -35,12 +36,14 @@
     <circle cx="0" cy="0" r="60" fill="url(#glass)"/>
     <g clip-path="url(#lens)">
       <ellipse cx="-24" cy="-28" rx="31" ry="18" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -24 -28)"/>
-      <path d="M -54 12 H -8 M 12 12 H 24 L 31 2 L 38 12 H 56"
-            fill="none" stroke="url(#spectrum)" stroke-width="5.5" opacity="0.5"
-            stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M -8 12 L -2 12 L 3 -38 L 9 28 L 12 12"
+      <!-- rozostrené P + QRS -->
+      <path d="M -28 12 L -22 3 L -17 12 L -11 12 L -7 20 L -2 -38 L 4 28 L 10 12"
+            fill="none" stroke="url(#spectrum)" stroke-width="8" opacity="0.9"
+            stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+      <!-- ostrá izoelektrická čiara -->
+      <path d="M -54 12 H -28 M 10 12 H 56"
             fill="none" stroke="url(#spectrum)" stroke-width="8"
-            stroke-linecap="round" stroke-linejoin="round"/>
+            stroke-linecap="round"/>
     </g>
     <circle cx="0" cy="0" r="78" fill="none" stroke="url(#ring)" stroke-width="12"/>
     <rect x="52" y="52" width="44" height="15" rx="7.5"
@@ -55,7 +58,7 @@
           fill="#274863">Forens<tspan fill="url(#accent)">ika</tspan></text>
     <text x="3" y="172" font-family="'Helvetica Neue', Arial, sans-serif"
           font-size="18" font-weight="400" letter-spacing="5"
-          fill="#7C90A4">FORENZNÁ EXPERTÍZA · KOMUNITA</text>
+          fill="#7C90A4">OBJASŇUJEME · SPÁJAME · POSÚVAME</text>
   </g>
   <!-- rozostrená vrstva navrchu, odkrytá len vľavo -->
   <g transform="translate(232,0)" filter="url(#soft)" mask="url(#fade)">
@@ -64,6 +67,6 @@
           fill="#274863">Forens<tspan fill="url(#accent)">ika</tspan></text>
     <text x="3" y="172" font-family="'Helvetica Neue', Arial, sans-serif"
           font-size="18" font-weight="400" letter-spacing="5"
-          fill="#7C90A4">FORENZNÁ EXPERTÍZA · KOMUNITA</text>
+          fill="#7C90A4">OBJASŇUJEME · SPÁJAME · POSÚVAME</text>
   </g>
 </svg>

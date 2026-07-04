@@ -1,12 +1,14 @@
 // Forensika — service worker.
 // Network-first pre navigáciu (nový deploy sa načíta hneď), cache ako offline záloha.
-var VERSION = 'forensika-v4';
+var VERSION = 'forensika-v5';
 var CORE = [
   './',
   './index.html',
   './css/styles.css',
   './js/app.js',
   './js/i18n.js',
+  './js/experts.js',
+  './js/tools.js',
   './manifest.webmanifest',
   './assets/logo.svg',
   './assets/favicon.svg',

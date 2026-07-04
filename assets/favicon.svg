@@ -3,6 +3,7 @@
     <linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
     <radialGradient id="g" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#fff"/><stop offset=".52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
     <linearGradient id="p" gradientUnits="userSpaceOnUse" x1="-82" y1="0" x2="84" y2="0"><stop offset="0" stop-color="#57C7BC"/><stop offset=".5" stop-color="#5EA6E2"/><stop offset="1" stop-color="#7E8FE6"/></linearGradient>
+    <filter id="bC" x="-40%" y="-60%" width="180%" height="220%"><feGaussianBlur stdDeviation="3.2"/></filter>
     <clipPath id="l"><circle cx="0" cy="0" r="92"/></clipPath>
   </defs>
   <rect width="512" height="512" rx="116" fill="url(#bg)"/>
@@ -10,8 +11,8 @@
     <circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
     <circle r="92" fill="url(#g)"/>
     <g clip-path="url(#l)">
-      <path d="M -80 18 H -12 M 18 18 H 36 L 47 4 L 58 18 H 82" fill="none" stroke="#8AA0B4" stroke-width="7" opacity=".45" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M -12 18 L -3 18 L 4 -52 L 13 40 L 18 18" fill="none" stroke="url(#p)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -42 18 L -34 4 L -26 18 L -16 18 L -10 30 L -2 -56 L 6 42 L 14 18" fill="none" stroke="url(#p)" stroke-width="12" opacity="0.9" stroke-linecap="round" stroke-linejoin="round" filter="url(#bC)"/>
+      <path d="M -82 18 H -42 M 14 18 H 84" fill="none" stroke="url(#p)" stroke-width="12" stroke-linecap="round"/>
     </g>
     <circle r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
     <rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
