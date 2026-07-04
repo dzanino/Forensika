@@ -81,6 +81,10 @@ window.I18N = {
     "ter.c2.p": "Presná fotodokumentácia a fotogrametria umožňujú verné 3D zaznamenanie nálezu aj miesta.",
     "ter.c3.h": "Výskum",
     "ter.c3.p": "Systematický výskum — často aj vo voľnom čase — spresňuje metódy a prináša nové poznatky do praxe.",
+    "ter.epi.tag": "Digitalizácia",
+    "ter.epi.h": "ePitvy — elektronizácia pitvy",
+    "ter.epi.p": "Pitevný proces sa postupne digitalizuje. Systém ePitvy — elektronizácia výkonu pitvy v rámci informačného systému ÚDZS — vznikol pod záštitou súčasného predsedu úradu MUDr. Mgr. Michala Palkoviča, PhD., MHA, MPH, ktorý je autorom návrhu aj jeho programového riešenia. Nadväzuje na celoslovenský systém ePrehliadky.",
+    "ter.epi.link": "Viac na ÚDZS",
 
     "tox.tag": "Súdnolekárska toxikológia",
     "tox.h2": "Neviditeľné, ktoré rozhoduje",
@@ -294,6 +298,10 @@ window.I18N = {
     "ter.c2.p": "Precise photo-documentation and photogrammetry allow a faithful 3D record of the finding and the scene.",
     "ter.c3.h": "Research",
     "ter.c3.p": "Systematic research — often in free time — refines methods and brings new knowledge into practice.",
+    "ter.epi.tag": "Digitalization",
+    "ter.epi.h": "ePitvy — electronization of the autopsy",
+    "ter.epi.p": "The autopsy process is being progressively digitalized. The ePitvy system — electronization of autopsy performance within the HCSA information system — was created under the auspices of the current chairman of the Office, MUDr. Mgr. Michal Palkovič, PhD., MHA, MPH, who is the author of both the proposal and its software implementation. It builds on the nationwide ePrehliadky system.",
+    "ter.epi.link": "More at HCSA",
 
     "tox.tag": "Forensic toxicology",
     "tox.h2": "The invisible that decides",
