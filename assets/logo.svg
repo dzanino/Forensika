@@ -1,0 +1,69 @@
+<svg width="880" height="240" viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forensika logo">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#33587A"/><stop offset="1" stop-color="#22415C"/>
+    </linearGradient>
+    <radialGradient id="glass" cx="34%" cy="28%" r="82%">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.5" stop-color="#EEF3F9"/><stop offset="1" stop-color="#D2DEEA"/>
+    </radialGradient>
+    <linearGradient id="spectrum" gradientUnits="userSpaceOnUse" x1="-54" y1="0" x2="56" y2="0">
+      <stop offset="0" stop-color="#4FCBBB"/><stop offset="0.38" stop-color="#66B0E8"/>
+      <stop offset="0.72" stop-color="#8E86EC"/><stop offset="1" stop-color="#C79BE2"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4FCBBB"/><stop offset="0.55" stop-color="#66B0E8"/><stop offset="1" stop-color="#8E86EC"/>
+    </linearGradient>
+    <clipPath id="lens"><circle cx="0" cy="0" r="60"/></clipPath>
+
+    <!-- rozostrenie -> ostrosť -->
+    <filter id="soft" x="-25%" y="-40%" width="150%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+    <linearGradient id="fadeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.42" stop-color="#FFFFFF"/>
+      <stop offset="0.78" stop-color="#000000"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <mask id="fade">
+      <rect x="228" y="60" width="640" height="140" fill="url(#fadeGrad)"/>
+    </mask>
+  </defs>
+
+  <!-- MARK: presvetlená lupa (nástroj jasna) -->
+  <g transform="translate(120,120)">
+    <circle cx="0" cy="0" r="60" fill="url(#glass)"/>
+    <g clip-path="url(#lens)">
+      <ellipse cx="-24" cy="-28" rx="31" ry="18" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -24 -28)"/>
+      <path d="M -54 12 H -8 M 12 12 H 24 L 31 2 L 38 12 H 56"
+            fill="none" stroke="url(#spectrum)" stroke-width="5.5" opacity="0.5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -8 12 L -2 12 L 3 -38 L 9 28 L 12 12"
+            fill="none" stroke="url(#spectrum)" stroke-width="8"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <circle cx="0" cy="0" r="78" fill="none" stroke="url(#ring)" stroke-width="12"/>
+    <rect x="52" y="52" width="44" height="15" rx="7.5"
+          transform="rotate(45 52 52)" fill="url(#ring)"/>
+  </g>
+
+  <!-- WORDMARK: vľavo rozostrené, vpravo ostré -->
+  <g transform="translate(232,0)">
+    <!-- ostrá vrstva -->
+    <text x="0" y="132" font-family="'Helvetica Neue', Arial, sans-serif"
+          font-size="72" font-weight="600" letter-spacing="1"
+          fill="#274863">Forens<tspan fill="url(#accent)">ika</tspan></text>
+    <text x="3" y="172" font-family="'Helvetica Neue', Arial, sans-serif"
+          font-size="18" font-weight="400" letter-spacing="5"
+          fill="#7C90A4">FORENZNÁ EXPERTÍZA · KOMUNITA</text>
+  </g>
+  <!-- rozostrená vrstva navrchu, odkrytá len vľavo -->
+  <g transform="translate(232,0)" filter="url(#soft)" mask="url(#fade)">
+    <text x="0" y="132" font-family="'Helvetica Neue', Arial, sans-serif"
+          font-size="72" font-weight="600" letter-spacing="1"
+          fill="#274863">Forens<tspan fill="url(#accent)">ika</tspan></text>
+    <text x="3" y="172" font-family="'Helvetica Neue', Arial, sans-serif"
+          font-size="18" font-weight="400" letter-spacing="5"
+          fill="#7C90A4">FORENZNÁ EXPERTÍZA · KOMUNITA</text>
+  </g>
+</svg>

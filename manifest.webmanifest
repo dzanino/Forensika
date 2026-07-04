@@ -1,0 +1,17 @@
+{
+  "name": "Forensika — súdne lekárstvo a toxikológia",
+  "short_name": "Forensika",
+  "description": "O poslaní a význame práce súdneho lekára a toxikológa. Aktuálne témy, podujatia a overené zdroje.",
+  "lang": "sk",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F4F6FA",
+  "theme_color": "#22415C",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

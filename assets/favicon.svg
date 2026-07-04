@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forensika">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#37608A"/><stop offset="1" stop-color="#1E3A54"/></linearGradient>
+    <radialGradient id="g" cx="34%" cy="26%" r="84%"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#EEF3F9"/><stop offset="1" stop-color="#CEDBE8"/></radialGradient>
+    <linearGradient id="s" gradientUnits="userSpaceOnUse" x1="-82" y1="0" x2="84" y2="0"><stop offset="0" stop-color="#54D4C2"/><stop offset=".38" stop-color="#66B0E8"/><stop offset=".72" stop-color="#8E86EC"/><stop offset="1" stop-color="#C79BE2"/></linearGradient>
+    <clipPath id="l"><circle cx="0" cy="0" r="92"/></clipPath>
+  </defs>
+  <rect width="512" height="512" rx="114" fill="url(#bg)"/>
+  <g transform="translate(256,248)">
+    <circle r="92" fill="url(#g)"/>
+    <g clip-path="url(#l)">
+      <path d="M -82 18 H -12 M 18 18 H 36 L 47 2 L 58 18 H 84" fill="none" stroke="url(#s)" stroke-width="8" opacity=".55" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -12 18 L -3 18 L 4 -56 L 13 44 L 18 18" fill="none" stroke="url(#s)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <circle r="118" fill="none" stroke="#F6F9FC" stroke-width="16"/>
+    <rect x="78" y="78" width="68" height="22" rx="11" transform="rotate(45 78 78)" fill="#F6F9FC"/>
+  </g>
+</svg>
