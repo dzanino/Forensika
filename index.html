@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Forensika — súdne lekárstvo a toxikológia</title>
-  <meta name="description" content="Forensika — o poslaní a význame práce súdneho lekára a toxikológa na Slovensku. Aktuálne témy, podujatia, vzdelávanie a overené zdroje." />
+  <title data-i18n="meta.title">Forensika — súdne lekárstvo a toxikológia</title>
+  <meta name="description" content="Forensika — o poslaní a význame práce súdneho lekára a toxikológa. Aktuálne témy, podujatia, vzdelávanie a overené zdroje." />
   <meta name="theme-color" content="#22415C" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -20,66 +20,73 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#top">
-        <svg class="brand-mark" viewBox="0 0 240 240" aria-hidden="true">
+        <svg class="brand-mark" viewBox="0 0 512 512" aria-hidden="true">
           <defs>
-            <linearGradient id="hr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#33587A"/><stop offset="1" stop-color="#22415C"/></linearGradient>
-            <radialGradient id="hg" cx="34%" cy="28%" r="82%"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#EEF3F9"/><stop offset="1" stop-color="#D2DEEA"/></radialGradient>
-            <linearGradient id="hs" gradientUnits="userSpaceOnUse" x1="-54" y1="0" x2="56" y2="0"><stop offset="0" stop-color="#4FCBBB"/><stop offset=".38" stop-color="#66B0E8"/><stop offset=".72" stop-color="#8E86EC"/><stop offset="1" stop-color="#C79BE2"/></linearGradient>
-            <clipPath id="hl"><circle cx="0" cy="0" r="60"/></clipPath>
+            <linearGradient id="hbg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+            <radialGradient id="hg" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#fff"/><stop offset=".52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+            <linearGradient id="hp" gradientUnits="userSpaceOnUse" x1="-82" y1="0" x2="84" y2="0"><stop offset="0" stop-color="#57C7BC"/><stop offset=".5" stop-color="#5EA6E2"/><stop offset="1" stop-color="#7E8FE6"/></linearGradient>
+            <clipPath id="hl"><circle cx="0" cy="0" r="92"/></clipPath>
           </defs>
-          <g transform="translate(112,120)">
-            <circle r="60" fill="url(#hg)"/>
+          <rect width="512" height="512" rx="116" fill="url(#hbg)"/>
+          <g transform="translate(256,248)">
+            <circle r="92" fill="url(#hg)"/>
             <g clip-path="url(#hl)">
-              <path d="M -54 12 H -8 M 12 12 H 24 L 31 2 L 38 12 H 56" fill="none" stroke="url(#hs)" stroke-width="5.5" opacity=".5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M -8 12 L -2 12 L 3 -38 L 9 28 L 12 12" fill="none" stroke="url(#hs)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M -80 18 H -12 M 18 18 H 36 L 47 4 L 58 18 H 82" fill="none" stroke="#8AA0B4" stroke-width="7" opacity=".45" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M -12 18 L -3 18 L 4 -52 L 13 40 L 18 18" fill="none" stroke="url(#hp)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
-            <circle r="78" fill="none" stroke="url(#hr)" stroke-width="12"/>
-            <rect x="52" y="52" width="44" height="15" rx="7.5" transform="rotate(45 52 52)" fill="url(#hr)"/>
+            <circle r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+            <rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
           </g>
         </svg>
         <span>Forens<span class="dot">ika</span></span>
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
       <nav class="nav" id="nav">
-        <a href="#poslanie">Poslanie</a>
-        <a href="#sudny-lekar">Súdny lekár</a>
-        <a href="#toxikologia">Toxikológia</a>
-        <a href="#aktualne">Aktuálne</a>
-        <a href="#zdroje">Zdroje</a>
-        <a href="#autor">Autor</a>
+        <a href="#poslanie" data-i18n="nav.poslanie">Poslanie</a>
+        <a href="#vizia" data-i18n="nav.vizia">Vízia</a>
+        <a href="#proces" data-i18n="nav.proces">Proces</a>
+        <a href="#toxikologia" data-i18n="nav.tox">Toxikológia</a>
+        <a href="#aktualne" data-i18n="nav.aktualne">Aktuálne</a>
+        <a href="#onas" data-i18n="nav.onas">O nás</a>
+        <a href="#autor" data-i18n="nav.autor">Autor</a>
+        <span class="langs" role="group" aria-label="Language">
+          <button class="lang" data-lang="sk">SK</button>
+          <button class="lang" data-lang="en">EN</button>
+          <button class="lang soon" data-lang="de" title="Čoskoro / Coming soon">DE</button>
+        </span>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
   <main id="top">
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <svg class="hero-mark" id="heroMark" viewBox="0 0 240 240" aria-label="Forensika">
+      <svg class="hero-mark" id="heroMark" viewBox="0 0 512 512" aria-label="Forensika">
         <defs>
-          <linearGradient id="Hr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5C82A6"/><stop offset="1" stop-color="#38607F"/></linearGradient>
-          <radialGradient id="Hg" cx="34%" cy="28%" r="82%"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#EEF3F9"/><stop offset="1" stop-color="#CBD9E7"/></radialGradient>
-          <linearGradient id="Hs" gradientUnits="userSpaceOnUse" x1="-54" y1="0" x2="56" y2="0"><stop offset="0" stop-color="#4FCBBB"/><stop offset=".38" stop-color="#66B0E8"/><stop offset=".72" stop-color="#8E86EC"/><stop offset="1" stop-color="#C79BE2"/></linearGradient>
-          <clipPath id="Hl"><circle cx="0" cy="0" r="60"/></clipPath>
+          <linearGradient id="Hbg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#33597D"/><stop offset="1" stop-color="#1B3346"/></linearGradient>
+          <radialGradient id="Hg" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#fff"/><stop offset=".52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+          <linearGradient id="Hp" gradientUnits="userSpaceOnUse" x1="-82" y1="0" x2="84" y2="0"><stop offset="0" stop-color="#57C7BC"/><stop offset=".5" stop-color="#5EA6E2"/><stop offset="1" stop-color="#7E8FE6"/></linearGradient>
+          <clipPath id="Hl"><circle cx="0" cy="0" r="92"/></clipPath>
         </defs>
-        <g transform="translate(112,120)">
-          <circle r="60" fill="url(#Hg)"/>
+        <g transform="translate(256,248)">
+          <circle r="92" fill="url(#Hg)"/>
           <g clip-path="url(#Hl)">
-            <ellipse cx="-24" cy="-28" rx="31" ry="18" fill="#fff" opacity=".55" transform="rotate(-28 -24 -28)"/>
-            <path d="M -54 12 H -8 M 12 12 H 24 L 31 2 L 38 12 H 56" fill="none" stroke="url(#Hs)" stroke-width="5.5" opacity=".55" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M -8 12 L -2 12 L 3 -38 L 9 28 L 12 12" fill="none" stroke="url(#Hs)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <ellipse cx="-38" cy="-44" rx="46" ry="26" fill="#fff" opacity=".55" transform="rotate(-28 -38 -44)"/>
+            <path d="M -80 18 H -12 M 18 18 H 36 L 47 4 L 58 18 H 82" fill="none" stroke="#8AA0B4" stroke-width="7" opacity=".5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M -12 18 L -3 18 L 4 -52 L 13 40 L 18 18" fill="none" stroke="url(#Hp)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
           </g>
-          <circle r="78" fill="none" stroke="url(#Hr)" stroke-width="12"/>
-          <rect x="52" y="52" width="44" height="15" rx="7.5" transform="rotate(45 52 52)" fill="url(#Hr)"/>
+          <circle r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+          <rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
         </g>
       </svg>
-      <div class="kicker">Forenzná expertíza · Komunita</div>
+      <div class="kicker" data-i18n="hero.kicker">Forenzná expertíza · Komunita</div>
       <h1>Forens<span class="dot">ika</span></h1>
-      <p class="lead">Keď okolnosti nie sú jasné, forenzné vedy vnášajú do prípadu svetlo a ostrosť.</p>
-      <p class="sub">O poslaní a význame práce súdneho lekára a toxikológa — pre odbornú aj širšiu verejnosť.</p>
+      <p class="lead" data-i18n="hero.lead">Keď okolnosti nie sú jasné, forenzné vedy vnášajú do prípadu svetlo a ostrosť.</p>
+      <p class="sub" data-i18n="hero.sub">O poslaní a význame práce súdneho lekára a toxikológa.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#poslanie">Preskúmať</a>
-        <button class="btn btn-ghost" id="installBtn">Nainštalovať aplikáciu</button>
+        <a class="btn btn-primary" href="#poslanie" data-i18n="hero.explore">Preskúmať</a>
+        <button class="btn btn-ghost" id="installBtn" data-i18n="hero.install">Nainštalovať aplikáciu</button>
       </div>
     </div>
   </section>
@@ -88,30 +95,60 @@
   <!-- POSLANIE -->
   <section id="poslanie">
     <div class="wrap">
-      <span class="section-tag reveal">Poslanie a význam</span>
-      <h2 class="reveal">Posledné objektívne svedectvo</h2>
-      <p class="section-intro reveal">
-        Súdne lekárstvo skúma telo a okolnosti smrti tam, kde slová chýbajú. Objektívne a nezávisle
-        zisťuje príčinu a mechanizmus úmrtia, prispieva k spravodlivosti a chráni verejné zdravie.
-        Tam, kde ostáva neistota, prináša overiteľné dôkazy a jasno — pre pozostalých, lekárov aj
-        orgány činné v trestnom konaní.
-      </p>
+      <span class="section-tag reveal" data-i18n="pos.tag">Poslanie a význam</span>
+      <h2 class="reveal" data-i18n="pos.h2">Posledné objektívne svedectvo</h2>
+      <p class="section-intro reveal" data-i18n="pos.intro"></p>
       <div class="grid c3">
         <div class="card reveal">
           <div class="icon i-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke-linejoin="round"/></svg></div>
-          <h3>Spravodlivosť</h3>
-          <p>Znalecké posudky poskytujú súdom a vyšetrovateľom objektívne podklady o príčine a okolnostiach smrti.</p>
+          <h3 data-i18n="pos.c1.h">Spravodlivosť</h3>
+          <p data-i18n="pos.c1.p"></p>
         </div>
         <div class="card reveal">
           <div class="icon i-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h4l2 5 4-13 2 8h6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h3>Verejné zdravie</h3>
-          <p>Analýzy úmrtí odhaľujú neočakávané a preventabilné príčiny a zlepšujú kvalitu zdravotnej starostlivosti.</p>
+          <h3 data-i18n="pos.c2.h">Verejné zdravie</h3>
+          <p data-i18n="pos.c2.p"></p>
         </div>
         <div class="card reveal">
           <div class="icon i-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg></div>
-          <h3>Pravda a jasno</h3>
-          <p>Kde ostáva pochybnosť, forenzná metóda hľadá overiteľnú odpoveď — dôsledne a nezaujato.</p>
+          <h3 data-i18n="pos.c3.h">Pravda a jasno</h3>
+          <p data-i18n="pos.c3.p"></p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÍZIA -->
+  <section id="vizia" class="alt">
+    <div class="wrap">
+      <span class="section-tag reveal" data-i18n="viz.tag">Spoločná vízia</span>
+      <h2 class="reveal" data-i18n="viz.h2">Spájať odbor, nie deliť</h2>
+      <p class="section-intro reveal" data-i18n="viz.intro"></p>
+      <div class="geo reveal" data-i18n="viz.geo">Slovensko · Česká republika · Európska únia</div>
+      <div class="chiplist reveal">
+        <span class="chip static" data-i18n="viz.d1"></span>
+        <span class="chip static" data-i18n="viz.d2"></span>
+        <span class="chip static" data-i18n="viz.d3"></span>
+        <span class="chip static" data-i18n="viz.d4"></span>
+        <span class="chip static" data-i18n="viz.d5"></span>
+        <span class="chip static" data-i18n="viz.d6"></span>
+        <span class="chip static" data-i18n="viz.d7"></span>
+        <span class="chip static" data-i18n="viz.d8"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCES -->
+  <section id="proces">
+    <div class="wrap">
+      <span class="section-tag reveal" data-i18n="proc.tag">Ako to prebieha</span>
+      <h2 class="reveal" data-i18n="proc.h2">Od nálezu k záveru</h2>
+      <p class="section-intro reveal" data-i18n="proc.intro"></p>
+      <div class="steps">
+        <div class="step reveal"><span class="num">1</span><h3 data-i18n="proc.s1.h"></h3><p data-i18n="proc.s1.p"></p></div>
+        <div class="step reveal"><span class="num">2</span><h3 data-i18n="proc.s2.h"></h3><p data-i18n="proc.s2.p"></p></div>
+        <div class="step reveal"><span class="num">3</span><h3 data-i18n="proc.s3.h"></h3><p data-i18n="proc.s3.p"></p></div>
+        <div class="step reveal"><span class="num">4</span><h3 data-i18n="proc.s4.h"></h3><p data-i18n="proc.s4.p"></p></div>
       </div>
     </div>
   </section>
@@ -119,101 +156,102 @@
   <!-- SÚDNY LEKÁR -->
   <section id="sudny-lekar" class="alt">
     <div class="wrap">
-      <span class="section-tag reveal">Čo robí súdny lekár</span>
-      <h2 class="reveal">Od miesta nálezu po znalecký posudok</h2>
-      <p class="section-intro reveal">
-        Pracoviská súdneho lekárstva a patologickej anatómie (SLaPA) zabezpečujú široké spektrum
-        nenahraditeľných činností — od obhliadky tela až po laboratórnu diagnostiku a expertízu.
-      </p>
+      <span class="section-tag reveal" data-i18n="sl.tag">Čo robí súdny lekár</span>
+      <h2 class="reveal" data-i18n="sl.h2">Od miesta nálezu po znalecký posudok</h2>
+      <p class="section-intro reveal" data-i18n="sl.intro"></p>
       <div class="grid c2">
-        <div class="card reveal"><h3>Prehliadky mŕtvych tiel</h3><p>Lekári vykonávajú obhliadky v teréne vo všetkých krajoch SR; celoslovensky ich prepája informačný systém ePrehliadky.</p></div>
-        <div class="card reveal"><h3>Pitvy</h3><p>Indikované pitvy na úseku patologickej anatómie a súdneho lekárstva, vrátane súdnych pitiev pre orgány činné v trestnom konaní.</p></div>
-        <div class="card reveal"><h3>Laboratórna diagnostika</h3><p>Histológia, histochémia, imunohistochémia a serológia — mikroskopické potvrdenie a spresnenie makroskopického nálezu.</p></div>
-        <div class="card reveal"><h3>Znalecká činnosť</h3><p>Odborné posudky pre súdy a vyšetrovateľov pri podozrení, že úmrtie mohlo súvisieť s trestným činom alebo úrazom.</p></div>
+        <div class="card reveal"><h3 data-i18n="sl.c1.h"></h3><p data-i18n="sl.c1.p"></p></div>
+        <div class="card reveal"><h3 data-i18n="sl.c2.h"></h3><p data-i18n="sl.c2.p"></p></div>
+        <div class="card reveal"><h3 data-i18n="sl.c3.h"></h3><p data-i18n="sl.c3.p"></p></div>
+        <div class="card reveal"><h3 data-i18n="sl.c4.h"></h3><p data-i18n="sl.c4.p"></p></div>
       </div>
       <div class="stats">
-        <div class="stat reveal"><b>200 000+</b><span>laboratórnych vyšetrení ročne na pracoviskách SLaPA</span></div>
-        <div class="stat reveal"><b>8 krajov</b><span>celoslovenské pokrytie obhliadkovej a pitevnej služby</span></div>
-        <div class="stat reveal"><b>ePrehliadky</b><span>jednotný informačný systém pre výkon prehliadok</span></div>
+        <div class="stat reveal"><b data-i18n="sl.stat1.n"></b><span data-i18n="sl.stat1.t"></span></div>
+        <div class="stat reveal"><b data-i18n="sl.stat2.n"></b><span data-i18n="sl.stat2.t"></span></div>
+        <div class="stat reveal"><b data-i18n="sl.stat3.n"></b><span data-i18n="sl.stat3.t"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERÉN A VÝSKUM -->
+  <section id="teren">
+    <div class="wrap">
+      <span class="section-tag reveal" data-i18n="ter.tag">V teréne a vo výskume</span>
+      <h2 class="reveal" data-i18n="ter.h2">Nielen pri stole — aj v teréne a vo výskume</h2>
+      <p class="section-intro reveal" data-i18n="ter.intro"></p>
+      <div class="grid c3">
+        <div class="card reveal">
+          <div class="icon i-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v18M16 3v18M4 9h16M4 15h16" stroke-linecap="round"/></svg></div>
+          <h3 data-i18n="ter.c1.h"></h3><p data-i18n="ter.c1.p"></p>
+        </div>
+        <div class="card reveal">
+          <div class="icon i-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+          <h3 data-i18n="ter.c2.h"></h3><p data-i18n="ter.c2.p"></p>
+        </div>
+        <div class="card reveal">
+          <div class="icon i-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 3v6.5L4.2 18a2 2 0 0 0 1.8 3h12a2 2 0 0 0 1.8-3L15 9.5V3" stroke-linejoin="round"/><path d="M8 3h8M8.5 14h7" stroke-linecap="round"/></svg></div>
+          <h3 data-i18n="ter.c3.h"></h3><p data-i18n="ter.c3.p"></p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TOXIKOLÓGIA -->
-  <section id="toxikologia">
+  <section id="toxikologia" class="alt">
     <div class="wrap">
-      <span class="section-tag reveal">Súdnolekárska toxikológia</span>
-      <h2 class="reveal">Neviditeľné, ktoré rozhoduje</h2>
-      <p class="section-intro reveal">
-        Toxikológia hľadá to, čo nie je vidieť voľným okom — alkohol, drogy, lieky a jedy. Vylúčenie,
-        dôkaz a kvantifikácia toxických látok často určia, či išlo o nehodu, ochorenie, alebo trestný čin.
-      </p>
+      <span class="section-tag reveal" data-i18n="tox.tag">Súdnolekárska toxikológia</span>
+      <h2 class="reveal" data-i18n="tox.h2">Neviditeľné, ktoré rozhoduje</h2>
+      <p class="section-intro reveal" data-i18n="tox.intro"></p>
       <div class="grid c3">
         <div class="card reveal">
           <div class="icon i-magenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 3h6M10 3v6l-5 8a3 3 0 0 0 3 4h8a3 3 0 0 0 3-4l-5-8V3" stroke-linejoin="round"/></svg></div>
-          <h3>Etanol a návykové látky</h3><p>Stanovenie koncentrácie alkoholu, amfetamínov, opioidov, kanabinoidov a ďalších látok v biologickom materiáli.</p>
+          <h3 data-i18n="tox.c1.h"></h3><p data-i18n="tox.c1.p"></p>
         </div>
         <div class="card reveal">
           <div class="icon i-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2v6l-3 9a2 2 0 0 0 2 3h4M6 2h6v6l3 9a2 2 0 0 1-2 3H9" stroke-linejoin="round"/></svg></div>
-          <h3>Lieky a otravy</h3><p>Identifikácia liekových interakcií, predávkovania a otráv — kľúčová pre určenie príčiny a mechanizmu smrti.</p>
+          <h3 data-i18n="tox.c2.h"></h3><p data-i18n="tox.c2.p"></p>
         </div>
         <div class="card reveal">
           <div class="icon i-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19h16M6 19V9m4 10V5m4 14v-7m4 7V8" stroke-linecap="round"/></svg></div>
-          <h3>Trestno-právne účely</h3><p>Objektívne výsledky pre orgány činné v trestnom konaní aj pre klinickú prax a dohľad nad zdravotnou starostlivosťou.</p>
+          <h3 data-i18n="tox.c3.h"></h3><p data-i18n="tox.c3.p"></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- AKTUÁLNE -->
-  <section id="aktualne" class="alt">
+  <section id="aktualne">
     <div class="wrap">
-      <span class="section-tag reveal">Aktuálne v odbore</span>
-      <h2 class="reveal">Dianie, akcie a vzdelávanie</h2>
-      <p class="section-intro reveal">
-        Odbor zastrešuje Slovenská súdnolekárska spoločnosť (kolektívny člen Slovenskej lekárskej
-        spoločnosti). Sleduj voľby, podujatia, semináre a publikačnú činnosť.
-      </p>
+      <span class="section-tag reveal" data-i18n="akt.tag">Aktuálne v odbore</span>
+      <h2 class="reveal" data-i18n="akt.h2">Dianie, akcie a vzdelávanie</h2>
+      <p class="section-intro reveal" data-i18n="akt.intro"></p>
       <div class="links">
         <a class="linkcard reveal" href="http://sudnelekarstvo.sk/volby/" target="_blank" rel="noopener">
-          <span class="tag">Voľby</span><span class="badge">2026</span>
-          <h3>Voľby do orgánov spoločnosti</h3>
-          <p>Voľby výboru Slovenskej súdnolekárskej spoločnosti pre nové funkčné obdobie.</p>
-          <span class="go">Otvoriť →</span>
+          <span class="tag" data-i18n="akt.volby.tag">Voľby</span><span class="badge">2026</span>
+          <h3 data-i18n="akt.volby.h"></h3><p data-i18n="akt.volby.p"></p><span class="go">→</span>
         </a>
         <a class="linkcard reveal" href="http://sudnelekarstvo.sk/podujatia/" target="_blank" rel="noopener">
-          <span class="tag">Podujatia</span>
-          <h3>Plán odborných podujatí</h3>
-          <p>Kongresy, konferencie a semináre doma i v zahraničí — aktuálny zoznam a plán na rok.</p>
-          <span class="go">Otvoriť →</span>
+          <span class="tag" data-i18n="akt.pod.tag">Podujatia</span>
+          <h3 data-i18n="akt.pod.h"></h3><p data-i18n="akt.pod.p"></p><span class="go">→</span>
         </a>
         <a class="linkcard reveal" href="https://www.udzs-sk.sk/sudne-lekarstvo-a-patologicka-anatomia/seminare-vzdelavanie/" target="_blank" rel="noopener">
-          <span class="tag">Vzdelávanie</span>
-          <h3>Semináre ÚDZS</h3>
-          <p>Klinicko-patologické a klinicko-súdnolekárske semináre a školenia prehliadajúcich lekárov.</p>
-          <span class="go">Otvoriť →</span>
+          <span class="tag" data-i18n="akt.vzd.tag">Vzdelávanie</span>
+          <h3 data-i18n="akt.vzd.h"></h3><p data-i18n="akt.vzd.p"></p><span class="go">→</span>
         </a>
         <a class="linkcard reveal" href="http://sudnelekarstvo.sk/publikacie/casopis/" target="_blank" rel="noopener">
-          <span class="tag">Publikácie</span>
-          <h3>Folia Societatis Medicinae Legalis Slovacae</h3>
-          <p>Odborný časopis Slovenskej súdnolekárskej spoločnosti.</p>
-          <span class="go">Otvoriť →</span>
+          <span class="tag" data-i18n="akt.pub.tag">Publikácie</span>
+          <h3 data-i18n="akt.pub.h"></h3><p data-i18n="akt.pub.p"></p><span class="go">→</span>
         </a>
         <a class="linkcard reveal" href="http://sudnelekarstvo.sk/toxikologicka-sekcia/" target="_blank" rel="noopener">
-          <span class="tag">Sekcia</span>
-          <h3>Toxikologická sekcia</h3>
-          <p>Odborná platforma pre súdnolekársku a analytickú toxikológiu.</p>
-          <span class="go">Otvoriť →</span>
+          <span class="tag" data-i18n="akt.tox.tag">Sekcia</span>
+          <h3 data-i18n="akt.tox.h"></h3><p data-i18n="akt.tox.p"></p><span class="go">→</span>
         </a>
         <a class="linkcard reveal" href="https://www.udzs-sk.sk/sudne-lekarstvo-a-patologicka-anatomia/oznamy/" target="_blank" rel="noopener">
-          <span class="tag">Oznamy</span>
-          <h3>Oznamy SLaPA / ÚDZS</h3>
-          <p>Aktuálne oznámenia, metodické usmernenia a organizačné informácie.</p>
-          <span class="go">Otvoriť →</span>
+          <span class="tag" data-i18n="akt.ozn.tag">Oznamy</span>
+          <h3 data-i18n="akt.ozn.h"></h3><p data-i18n="akt.ozn.p"></p><span class="go">→</span>
         </a>
       </div>
-
-      <p class="section-intro reveal" style="margin-top:34px">Odborné spoločnosti a partneri (SK/CZ a medzinárodné):</p>
+      <p class="section-intro reveal" style="margin-top:34px" data-i18n="akt.partneri"></p>
       <div class="chiplist reveal">
         <a class="chip" href="https://www.soudnilekarstvi.cz" target="_blank" rel="noopener">ČSSL a soudní toxikologie</a>
         <a class="chip" href="http://www.spolocnostpatologov.sk" target="_blank" rel="noopener">Slovenská spoločnosť patológov</a>
@@ -221,59 +259,76 @@
         <a class="chip" href="https://www.soft-tox.org/" target="_blank" rel="noopener">SOFT</a>
         <a class="chip" href="https://ialm.info/" target="_blank" rel="noopener">IALM</a>
         <a class="chip" href="http://eclm.eu/" target="_blank" rel="noopener">ECLM</a>
+        <a class="chip" href="https://www.dgrm.de/" target="_blank" rel="noopener">DGRM (Nemecko)</a>
         <a class="chip" href="https://www.medunigraz.at/gerichtsmedizin" target="_blank" rel="noopener">Gerichtsmedizin Graz</a>
       </div>
     </div>
   </section>
 
   <!-- ZDROJE -->
-  <section id="zdroje">
+  <section id="zdroje" class="alt">
     <div class="wrap">
-      <span class="section-tag reveal">Overené zdroje</span>
-      <h2 class="reveal">Odkiaľ čerpáme</h2>
+      <span class="section-tag reveal" data-i18n="zdr.tag">Overené zdroje</span>
+      <h2 class="reveal" data-i18n="zdr.h2">Odkiaľ čerpáme</h2>
       <div class="links">
         <a class="linkcard reveal" href="http://sudnelekarstvo.sk/" target="_blank" rel="noopener">
-          <span class="tag">Odborná spoločnosť</span>
-          <h3>Slovenská súdnolekárska spoločnosť</h3>
-          <p>Kolektívny člen Slovenskej lekárskej spoločnosti — orgány, dokumenty, vzdelávanie, podujatia a publikácie.</p>
-          <span class="go">sudnelekarstvo.sk →</span>
+          <span class="tag" data-i18n="zdr.ssls.tag"></span>
+          <h3 data-i18n="zdr.ssls.h"></h3><p data-i18n="zdr.ssls.p"></p><span class="go">sudnelekarstvo.sk →</span>
         </a>
         <a class="linkcard reveal" href="https://www.udzs-sk.sk/sudne-lekarstvo-a-patologicka-anatomia/zakladne-informacie/" target="_blank" rel="noopener">
-          <span class="tag">Štátny dohľad</span>
-          <h3>ÚDZS — Súdne lekárstvo a patologická anatómia</h3>
-          <p>Pracoviská SLaPA: prehliadky, pitvy, laboratórne a toxikologické vyšetrenia, cenníky a kontakty.</p>
-          <span class="go">udzs-sk.sk →</span>
+          <span class="tag" data-i18n="zdr.udzs.tag"></span>
+          <h3 data-i18n="zdr.udzs.h"></h3><p data-i18n="zdr.udzs.p"></p><span class="go">udzs-sk.sk →</span>
         </a>
         <a class="linkcard reveal" href="https://www.fmed.uniba.sk/pracoviska/teoreticke-ustavy/ustav-sudneho-lekarstva-a-sudnolekarskej-toxikologie-lf-uk/" target="_blank" rel="noopener">
-          <span class="tag">Akademická pôda</span>
-          <h3>Ústav súdneho lekárstva a súdnolekárskej toxikológie LF UK</h3>
-          <p>Výučba a výskum v súdnom lekárstve a súdnolekárskej toxikológii na Lekárskej fakulte UK v Bratislave.</p>
-          <span class="go">fmed.uniba.sk →</span>
+          <span class="tag" data-i18n="zdr.lfuk.tag"></span>
+          <h3 data-i18n="zdr.lfuk.h"></h3><p data-i18n="zdr.lfuk.p"></p><span class="go">fmed.uniba.sk →</span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- O NÁS -->
+  <section id="onas">
+    <div class="wrap">
+      <span class="section-tag reveal" data-i18n="onas.tag">O nás</span>
+      <h2 class="reveal" data-i18n="onas.h2">Súdnolekárske pracovisko ÚDZS Bratislava</h2>
+      <p class="section-intro reveal" data-i18n="onas.intro"></p>
+      <div class="people">
+        <div class="person reveal">
+          <div class="ava sm"><span>RK</span></div>
+          <div>
+            <h3>doc. MUDr. Roman Kuruc, PhD.</h3>
+            <div class="role" data-i18n="onas.lead1.role">Primár SLP ÚDZS Bratislava</div>
+          </div>
+        </div>
+        <div class="person reveal">
+          <div class="ava sm"><span>JŠ</span></div>
+          <div>
+            <h3>prof. MUDr. Jozef Šidlo, CSc., MPH, FIALM</h3>
+            <div class="role" data-i18n="onas.lead2.role">Prednosta Ústavu súdneho lekárstva a súdnolekárskej toxikológie LF UK</div>
+          </div>
+        </div>
+      </div>
+      <p class="team-note reveal" data-i18n="onas.team">…a kolektív lekárov, laborantov a odborných pracovníkov pracoviska.</p>
     </div>
   </section>
 
   <!-- AUTOR -->
   <section id="autor" class="alt">
     <div class="wrap">
-      <span class="section-tag reveal">O autorovi</span>
+      <span class="section-tag reveal" data-i18n="aut.tag">O autorovi</span>
       <div class="author reveal">
         <div class="ava"><span>JŠ</span></div>
         <div class="body">
           <h3>Ján Šikuta, MD, PhD.</h3>
-          <div class="role">Súdny lekár a toxikológ</div>
-          <p>
-            Venuje sa pitevnej a histologickej diagnostike, súdnolekárskej toxikológii a znaleckej činnosti.
-            V každodennej praxi ho zaujíma to, čo forenzná medicína dokáže najlepšie — z nejasného urobiť
-            jasné, z domnienky overiteľný nález.
-          </p>
-          <p>
-            Je autorom projektu <strong>Forensika</strong>, ktorého cieľom je zjednotiť a zmodernizovať
-            nástroje dennej praxe súdneho lekára — od pitevných protokolov cez histológiu a toxikológiu
-            až po znalecké posudky — a zároveň budovať odbornú komunitu, ktorá zdieľa metódy, podnety
-            a skúsenosti.
-          </p>
+          <div class="role" data-i18n="aut.role">Súdny lekár a toxikológ · vývojár</div>
+          <p data-i18n="aut.p1"></p>
+          <p data-i18n-html="aut.p2"></p>
+          <div class="author-badges">
+            <span class="pill" data-i18n="aut.badge1">Súdne lekárstvo</span>
+            <span class="pill ghost" data-i18n="aut.badge2">Zobrazovacie metódy</span>
+            <span class="pill ghost" data-i18n="aut.badge3">Výskum</span>
+          </div>
         </div>
       </div>
     </div>
@@ -286,10 +341,10 @@
       <div class="foot-grid">
         <div>
           <h4>Forensika</h4>
-          <p>Nezávislý vzdelávací a komunitný projekt o práci súdneho lekára a toxikológa na Slovensku.</p>
+          <p data-i18n="foot.about"></p>
         </div>
         <div>
-          <h4>Zdroje</h4>
+          <h4 data-i18n="foot.h.zdroje">Zdroje</h4>
           <ul>
             <li><a href="http://sudnelekarstvo.sk/" target="_blank" rel="noopener">sudnelekarstvo.sk</a></li>
             <li><a href="https://www.udzs-sk.sk/sudne-lekarstvo-a-patologicka-anatomia/zakladne-informacie/" target="_blank" rel="noopener">ÚDZS — SLaPA</a></li>
@@ -297,30 +352,30 @@
           </ul>
         </div>
         <div>
-          <h4>Navigácia</h4>
+          <h4 data-i18n="foot.h.nav">Navigácia</h4>
           <ul>
-            <li><a href="#poslanie">Poslanie</a></li>
-            <li><a href="#sudny-lekar">Súdny lekár</a></li>
-            <li><a href="#toxikologia">Toxikológia</a></li>
-            <li><a href="#aktualne">Aktuálne</a></li>
+            <li><a href="#poslanie" data-i18n="nav.poslanie">Poslanie</a></li>
+            <li><a href="#proces" data-i18n="nav.proces">Proces</a></li>
+            <li><a href="#toxikologia" data-i18n="nav.tox">Toxikológia</a></li>
+            <li><a href="#aktualne" data-i18n="nav.aktualne">Aktuálne</a></li>
           </ul>
         </div>
       </div>
       <div class="disclaimer">
-        Forensika je nezávislý informačný a vzdelávací projekt. Nie je oficiálnou stránkou uvedených
-        inštitúcií; odkazy smerujú na ich oficiálne zdroje. Obsah má informatívny charakter a nenahrádza
-        odborné, právne ani zdravotnícke poradenstvo. © <span id="year"></span> Ján Šikuta, MD, PhD.
+        <p data-i18n="foot.disclaimer"></p>
+        <p>© <span id="year"></span> Ján Šikuta, MD, PhD.</p>
       </div>
     </div>
   </footer>
 
   <!-- INSTALL BANNER -->
   <div class="install" id="installBanner">
-    <div class="t">Nainštalovať Forensiku do zariadenia pre rýchly a offline prístup?</div>
-    <button class="yes" id="installYes">Inštalovať</button>
-    <button class="no" id="installNo">Neskôr</button>
+    <div class="t" data-i18n="install.text">Nainštalovať Forensiku do zariadenia pre rýchly a offline prístup?</div>
+    <button class="yes" id="installYes" data-i18n="install.yes">Inštalovať</button>
+    <button class="no" id="installNo" data-i18n="install.no">Neskôr</button>
   </div>
 
+  <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

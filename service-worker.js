@@ -1,10 +1,12 @@
-// Forensika — service worker (offline-first pre statické súbory).
-var CACHE = 'forensika-v1';
-var ASSETS = [
+// Forensika — service worker.
+// Network-first pre navigáciu (nový deploy sa načíta hneď), cache ako offline záloha.
+var VERSION = 'forensika-v4';
+var CORE = [
   './',
   './index.html',
   './css/styles.css',
   './js/app.js',
+  './js/i18n.js',
   './manifest.webmanifest',
   './assets/logo.svg',
   './assets/favicon.svg',
@@ -15,37 +17,53 @@ var ASSETS = [
 ];
 
 self.addEventListener('install', function (e) {
-  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }));
-  self.skipWaiting();
+  e.waitUntil(caches.open(VERSION).then(function (c) { return c.addAll(CORE); }));
 });
 
 self.addEventListener('activate', function (e) {
   e.waitUntil(
     caches.keys().then(function (keys) {
-      return Promise.all(keys.map(function (k) {
-        if (k !== CACHE) return caches.delete(k);
-      }));
-    })
+      return Promise.all(keys.map(function (k) { if (k !== VERSION) return caches.delete(k); }));
+    }).then(function () { return self.clients.claim(); })
   );
-  self.clients.claim();
+});
+
+// Umožní stránke prepnúť na novú verziu bez čakania.
+self.addEventListener('message', function (e) {
+  if (e.data && e.data.type === 'SKIP_WAITING') self.skipWaiting();
 });
 
 self.addEventListener('fetch', function (e) {
   var req = e.request;
   if (req.method !== 'GET') return;
-  // Externé odkazy (napr. sudnelekarstvo.sk) nechávame na sieť.
-  if (new URL(req.url).origin !== self.location.origin) return;
+  if (new URL(req.url).origin !== self.location.origin) return; // externé odkazy → sieť
 
-  e.respondWith(
-    caches.match(req).then(function (cached) {
-      if (cached) return cached;
-      return fetch(req).then(function (res) {
+  var isNav = req.mode === 'navigate' ||
+    (req.headers.get('accept') || '').indexOf('text/html') !== -1;
+
+  if (isNav) {
+    // Network-first: vždy skús najnovšiu verziu, offline padni na cache.
+    e.respondWith(
+      fetch(req).then(function (res) {
         var copy = res.clone();
-        caches.open(CACHE).then(function (c) { c.put(req, copy); });
+        caches.open(VERSION).then(function (c) { c.put(req, copy); });
         return res;
       }).catch(function () {
-        return caches.match('./index.html');
-      });
+        return caches.match(req).then(function (r) { return r || caches.match('./index.html'); });
+      })
+    );
+    return;
+  }
+
+  // Ostatné statické súbory: stale-while-revalidate.
+  e.respondWith(
+    caches.match(req).then(function (cached) {
+      var net = fetch(req).then(function (res) {
+        var copy = res.clone();
+        caches.open(VERSION).then(function (c) { c.put(req, copy); });
+        return res;
+      }).catch(function () { return cached; });
+      return cached || net;
     })
   );
 });

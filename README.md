@@ -17,11 +17,12 @@ sa pri scrollovaní „zaostruje“ (blur → sharp). Symbol je presvetlená lup
 
 ```
 forensika-pwa/
-├── index.html              # hlavná stránka (SK)
+├── index.html              # hlavná stránka (SK/EN, DE pripravené)
 ├── css/styles.css          # štýl (paleta navy + spektrum)
-├── js/app.js               # navigácia, zaostrovanie, inštalácia, SW
+├── js/i18n.js              # preklady SK/EN (+ DE slot)
+├── js/app.js               # jazyk, zaostrovanie, inštalácia, auto-update
 ├── manifest.webmanifest    # PWA manifest
-├── service-worker.js       # offline cache
+├── service-worker.js       # network-first + offline cache
 ├── assets/
 │   ├── logo.svg            # logo (rozostrené → ostré)
 │   ├── favicon.svg
@@ -29,6 +30,18 @@ forensika-pwa/
 │   └── apple-touch-icon.png
 └── README.md
 ```
+
+## Jazyky
+
+Prepínač SK / EN v hlavičke; voľba sa pamätá (localStorage). DE je pripravené —
+stačí doplniť objekt `de` v `js/i18n.js` (kým je prázdny, DE je neaktívne a padá na EN).
+
+## Aktualizácia po deploji
+
+Service worker používa **network-first** pre stránku, takže nový deploy sa načíta hneď.
+Nová verzia SW sa aktivuje automaticky (`SKIP_WAITING`) a stránka sa raz obnoví
+(`controllerchange`). Pri väčších zmenách statických súborov zvýš `VERSION`
+v `service-worker.js` (`forensika-v3` → `v4`) — vyčistí sa tým stará cache.
 
 ## Spustenie lokálne
 
