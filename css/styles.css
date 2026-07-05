@@ -272,3 +272,5 @@ h2{font-size:clamp(26px,4vw,38px)}
 .dedic{margin:6px 0 0;font-weight:600;color:var(--ink)}
 
 .ver{color:#8FA3B6;font-size:12px}
+
+.note .src{font-weight:700;color:var(--blue)}
