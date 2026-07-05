@@ -87,7 +87,7 @@ window.I18N = {
     "ter.epi.link": "Viac na ÚDZS",
     "ter.epr.tag": "Digitalizácia · EÚ",
     "ter.epr.h": "ePrehliadky — celoslovenský systém",
-    "ter.epr.p": "ePrehliadky sú celoslovenský informačný systém pre výkon a evidenciu prehliadok mŕtvych tiel a tvoria základ reformy prehliadkovej služby účinnej od 1. 10. 2021. Projekt „ePrehliadky ÚDZS“ (NFP 311070Z742) realizoval Úrad pre dohľad nad zdravotnou starostlivosťou a bol spolufinancovaný z Európskej únie v rámci Operačného programu Integrovaná infraštruktúra. Práve na tento digitálny základ neskôr nadviazali ePitvy.",
+    "ter.epr.p": "ePrehliadky sú celoslovenský informačný systém pre výkon a evidenciu prehliadok mŕtvych tiel a tvoria základ reformy prehliadkovej služby účinnej od 1. 10. 2021. Projekt „ePrehliadky ÚDZS“ (NFP 311070Z742) realizoval Úrad pre dohľad nad zdravotnou starostlivosťou a bol spolufinancovaný z Európskej únie v rámci Operačného programu Integrovaná infraštruktúra.",
     "ter.epr.link": "Projekt ePrehliadky (ÚDZS)",
 
     "tox.tag": "Súdnolekárska toxikológia",
